@@ -1,0 +1,29 @@
+{
+    "name": "WS",
+    "description":"premier essaie",
+    "version":"1.0.0",
+    "browser_action":{
+        "default_popup":"index.html"
+    },
+    "background":{
+        "scripts": ["background.js"],
+        "persistent":true
+    },
+    "permissions" : [
+        "webRequest",
+        "http://localhost/PGL-WebSocket/public/index.php/api/contacts",
+        "https://www.linkedin.com/in/soukainachaoui1/",
+        "webNavigation"
+    ],
+    "content_scripts":[
+        {
+            "matches": [
+                "https://www.linkedin.com/*",
+                "https://phpsources.net/code/php/fichiers-repertoires/289_afficher-tout-le-contenu-d-un-fichier"
+            ],
+            "js" : ["content_script.js"]
+        }
+    ]
+    ,
+    "manifest_version":2
+}
