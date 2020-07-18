@@ -11,13 +11,17 @@
     },
     "permissions" : [
         "webRequest",
-        "http://localhost/PGL-WebSocket/public/index.php/api/contacts",
+        "https://localhost:44388/api/profit",
         "https://www.linkedin.com/in/soukainachaoui1/",
         "webNavigation"
+    ],
+    "web_accessible_resources": [
+        "node_modules/mongodb/*"
     ],
     "content_scripts":[
         {
             "matches": [
+                "https://localhost:44388/api/profit",
                 "https://www.linkedin.com/*",
                 "https://phpsources.net/code/php/fichiers-repertoires/289_afficher-tout-le-contenu-d-un-fichier"
             ],

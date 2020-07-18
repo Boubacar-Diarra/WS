@@ -6,7 +6,7 @@
                   "from the extension");*/
       if (request.order == "extraire"){
         let data = {
-            "name" : document.getElementsByClassName("inline")[0].innerHTML
+            "prenom_nom" : document.getElementsByClassName("inline")[0].innerHTML
         }
         sendResponse({farewell: JSON.stringify(data)});
     }
